@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css" media="screen">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
+
+<script>
+    function setCookie(cname,cvalue,exdays) {
+      var d = new Date();
+    //   d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      d.setTime(d.getTime() + (1*60*1000));
+      var expires = "expires=" + d.toGMTString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    
+    function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+    
+    function checkCookie() {
+      var user=getCookie("username");
+      if (user != "") {
+        alert("Welcome again " + user);
+      } else {
+         user = prompt("Please enter your name:","");
+         if (user != "" && user != null) {
+           setCookie("username", user, 30);
+         }
+      }
+    }
+    </script>
+    
+    <style>
+    h2 {
+        color:white;
+        /* font-size: 20px; */
+        text-align: center;
+        display: inline;
+        position: absolute;
+        left: 8%;
+        font-size: 3.5rem;
+        margin: auto;
+        /* bottom:0.1%; */
+        top: 0;
+        font-family: 'Oleo Script', cursive;
+    }
+</style>
+</head>
+
+<body onload="checkCookie()">
+    
+    <section class = "sec1">
+        <header>
+            <a href="#" class="logo">
+                <img src="images/logo.jpg" alt="Logo" height=80% width=85px>
+            </a>
+            <div class="menu-toggle"></div>
+            <nav>
+                <ul>
+                    <h2>HELPIFY</h2>
+                    <li> <a href ='/admin'> Admin </a> </li>
+                    <li> <a href ='/bank' >Bank </a> </li>
+                    <li> <a href ='/donate' >Medicine Donation</a> </li>
+                    <li> <a href ='/moneydonation' >Money Donation </a> </li>
+                    <li> <a href ='/ngo' >Fund for NGO </a> </li> 
+                </ul>
+            </nav>
+            <div class="clearfix"></div>
+        </header>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu-toggle').click(function(){
+                $('.menu-toggle').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        })
+        </script>
+        <h4>Acknowledgement</h4>
+
+        <p class="ack">In this new edition of the guidlines for medical donations we would like to thank all our past contributers.For the 
+        update we particularly acknowledge the input from the members of the Interagacy Pharmaceutical Coordination Group who did the first draft upate of the text, consultants for WHO, Lisa bero who assisted with the systematic review of the experience of drug donations over the past ten years since the previous edition and all others who provided comments.</p><br>
+
+        <p class= "ack"><b>Guidelines for medicine donations is based on four core principles that form the basis of good medicine donation practice, namely:</b></p>	
+        
+        <div class = "POINTS">
+            <ol class="points">
+                <li>Donations of medicines should benefit the recipient to the maximum extent possible.All donations should be based on an expressed need. Unsolicited medicine donations are to be discouraged.</li>
+                <li>Donations should be given with due respect for the wishes and authority of the recipient, and in conformity with the government policies and administrative arrangements of the recipient country.</li>
+                <li>There should be effective coordination and collaboration between the donor and the recipient, with all donations made according to a plan formulated by both parties.</li>
+                <li>There should be no double standard in quality. If the quality of an item is unacceptable in the donor country, it is also unacceptable as a donation.</li>
+            </ol>
+        </div>
+
+        <!-- <div class="one"> -->
+            <a href="guidlines.pdf" download target="_blank"> <img class="one" src="images/five.jpeg"alt="Guidelines for medicine donations"> </a>
+        <!-- </div> -->    
+    </section>
+    <!-- <section class="sec2">This is section 2</section> -->
+
+    <script src="index.js"></script>
+ 
+</body>
+</html>

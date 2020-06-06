@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Donate medicine</title>
+    <link rel="stylesheet" type="text/css" href="css/donate.css" media="screen">
+</head>
+<body>
+	<center>
+    
+    <div class="row">
+        <div class="container">
+            <div class=".col-50">
+                <h2 class="text-center">Medicine Donation box</h2>
+                <center>
+                <form action="/donate" method="POST">
+                    <div class="form-group">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" required><br>
+                    </div>
+                    <div class="form-group">
+                      <label for="add">Address:</label>
+                      <textarea type="text" id="add" name="add" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneno">Phone No:</label>
+                        <textarea type="text" id="phoneno" name="phoneno"required></textarea>
+                    </div>
+                    <div class="form-group">
+                    <label for="medi">Medicine name:</label>
+                    <textarea type="text" id="medi" name="medi" required></textarea>
+                    </div><br>
+                    <div class="form-group">
+                    <!--     <label for="quan">Quantity(Number of pills):</label>
+                        <input type="text" id="quan" name="quan" required><br> -->
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </center>
+            </div>
+        </div>
+        
+    </div><br>
+    <marquee direction="left"><br><i><b>Please only donate medicines that have atleast one month left till expiry!!!</b></i></marquee>
+    </center>
+</body>
+</html>
