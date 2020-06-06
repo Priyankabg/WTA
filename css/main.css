@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    padding: 5px;
+    /* background: #f1f1f1; */
+    /* background: url(bub.jpg) fixed no-repeat; */
+    background: url(bub.gif) fixed no-repeat;
+    background-size: cover;
+}
+header{
+    /* border:2px solid red; */
+    /* background-color: lightgrey; */
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+    /* width:100%; */
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Bitter', serif;
+}
+.row{
+    margin:0px;
+    padding:0px;
+    /* border:2px solid red; */
+}
+.row a{
+    text-decoration: none;
+}
+.row:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+h2{
+    margin:0;
+}
+.column{
+    float: left;
+    padding: 10px;
+}
+.column.left{
+    width:48%;
+    /* background-color: lightgrey; */
+    margin:1%;
+    height:75vh;
+    overflow: hidden;
+    text-align: center;
+}
+.column.right{
+    width:48%;
+    /* background-color: lightgrey; */
+    margin: 1%;
+    float: right;
+    height:75vh;
+    overflow: hidden;
+    text-align: center;
+}
+img{
+    width:95%;
+    height:90%;
+}
+@media only screen and (max-width:430px){
+
+    .column.left{
+        width:90%;
+        /* background-color: lightgrey; */
+        /* margin:1%; */
+        /* height:75vh; */
+        overflow: hidden;
+        text-align: center;
+    }
+    .column.right{
+        width:90%;
+        /* background-color: lightgrey; */
+        /* margin: 1%; */
+        float: right;
+        /* height:75vh; */
+        overflow: hidden;
+        text-align: center;
+    }
+    img{
+        width:95%;
+        height:90%;
+    }
+    .row{
+        margin:0px;
+        padding:0px;
+        /* border:2px solid red; */
+    }
+    .row a{
+        text-decoration: none;
+    }
+    .row:after{
+        content:"";
+        display: table;
+        clear: both;
+    }
+
+}
